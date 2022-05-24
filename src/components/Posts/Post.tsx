@@ -1,11 +1,11 @@
 import { ReactElement } from 'react';
-import { PostViewProps } from './Post.props';
+import { PostProps } from './Post.props';
 
-export const Post = ({ post, author }: PostViewProps): ReactElement => (
-  <div className="mx-32 mt-32 overflow-hidden bg-white shadow sm:rounded-lg">
+export const Post = ({ post }: PostProps): ReactElement => (
+  <div className="mt-32 overflow-hidden bg-white shadow sm:rounded-lg">
     <div className="px-4 py-5 sm:px-6">
       <h3 className="text-lg font-medium leading-6 text-gray-900">
-        {author?.name}'s Post
+        {post?.authorName}'s Post
       </h3>
       <p className="max-w-2xl mt-1 text-sm text-gray-500">
         Details and contents.
@@ -21,9 +21,11 @@ export const Post = ({ post, author }: PostViewProps): ReactElement => (
         </div>
 
         <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-          <dt className="text-sm font-medium text-gray-500">Email address</dt>
+          <dt className="text-sm font-medium text-gray-500">
+            Author email address
+          </dt>
           <dd className="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-            {author?.email}
+            {post?.authorEmail}
           </dd>
         </div>
         <div className="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">

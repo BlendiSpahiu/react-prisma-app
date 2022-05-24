@@ -3,9 +3,6 @@ export interface Post {
   title: string;
   content?: string;
   published: boolean;
-  authorId: number;
-  author?: {
-    name: string;
-    email: string;
-  };
+  authorName: string;
+  authorEmail: string;
 }

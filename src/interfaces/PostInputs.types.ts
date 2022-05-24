@@ -3,5 +3,4 @@ export type PostInputs = {
   content: string;
   authorName: string;
   authorEmail: string;
-  authorId: number;
 };

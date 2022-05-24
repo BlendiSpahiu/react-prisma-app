@@ -12,12 +12,17 @@ export const Posts = (): ReactElement => {
   // hooks
   const navigate = useNavigate();
 
-  // useEffect
-  useEffect(() => {
-    axios({
+  // handlers
+  const getData = async () => {
+    await axios({
       method: 'get',
       url: 'http://localhost:4400/posts',
     }).then((res) => setPosts(res.data));
+  };
+
+  // useEffect
+  useEffect(() => {
+    getData();
   }, []);
 
   const handleAddForm = () => navigate('/add-post');

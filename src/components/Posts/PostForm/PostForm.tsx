@@ -26,9 +26,8 @@ export const PostForm = (): ReactElement => {
         title: data.title,
         content: data.content,
         published: false,
-        authorId: data.authorId,
-        name: data.authorName,
-        email: data.authorEmail,
+        authorName: data.authorName,
+        authorEmail: data.authorEmail,
       },
     });
     navigate('/posts');
