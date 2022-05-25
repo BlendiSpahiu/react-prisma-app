@@ -90,16 +90,16 @@ export const PostForm = (): ReactElement => {
               </div>
             </div>
 
-            <div className="flex sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+            <div className="grid grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
               <label
                 htmlFor="cover-photo"
                 className="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2 "
               >
                 Author
               </label>
-              <div className="mt-1  ml-[180px] sm:mt-0">
-                <div className="space-y-1 text-center">
-                  <div className="flex flex-col items-start space-x-2 space-y-2 text-sm text-gray-600">
+              <div className="mt-1 sm:mt-0">
+                <div className="space-y-1 text-left">
+                  <div className="space-x-2 space-y-2 text-sm text-gray-600">
                     <label
                       htmlFor="title"
                       className="block px-2 py-2 text-sm font-medium text-gray-700"
@@ -107,14 +107,14 @@ export const PostForm = (): ReactElement => {
                       Name
                     </label>
                     <div className="mt-1 sm:mt-0 sm:col-span-2">
-                      <div className="flex max-w-lg rounded-md shadow-sm">
+                      <div className="max-w-lg rounded-md shadow-sm">
                         <input
                           {...register('authorName')}
                           type="text"
                           name="authorName"
                           id="authorName"
                           autoComplete="authorName"
-                          className="block w-[480px] min-w-0 p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 rounded-r-md sm:text-sm"
+                          className="block w-full min-w-0 p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 rounded-r-md sm:text-sm"
                         />
                       </div>
                     </div>
@@ -125,14 +125,14 @@ export const PostForm = (): ReactElement => {
                       Email
                     </label>
                     <div className="mt-1 sm:mt-0 sm:col-span-2">
-                      <div className="flex max-w-lg rounded-md shadow-sm">
+                      <div className="max-w-lg rounded-md shadow-sm">
                         <input
                           {...register('authorEmail')}
                           type="text"
                           name="authorEmail"
                           id="authorEmail"
                           autoComplete="authorEmail"
-                          className="block w-[480px] min-w-0 p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 rounded-r-md sm:text-sm"
+                          className="block w-full min-w-0 p-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500 rounded-r-md sm:text-sm"
                         />
                       </div>
                     </div>
